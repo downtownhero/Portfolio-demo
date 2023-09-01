@@ -1,0 +1,832 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+body{
+    width: 100%;
+    background-color: black;
+}
+
+body::-webkit-scrollbar{
+    width: 5px;
+}
+body::-webkit-scrollbar-track{
+    width: 5px;
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    width: 5px;
+    background: linear-gradient( #A5FECB 0%, #20BDFF 50%, #5433FF 100%);
+    border-radius: 10px;
+}
+
+#loader-con{
+    width: 100%;
+    min-height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+#loader{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    animation: beat 2s infinite;
+    transition: all 2s;
+}
+
+@keyframes beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.5);}
+    100%{transform: scale(1);}
+}
+
+
+/* start mobile nav coding */
+
+#menu, .slicknav_menu, .desk-menu{
+    display: none;
+}
+
+@media (max-width:992px){
+    .slicknav_menu{
+        display: block;
+        z-index: 10;
+    }
+}
+
+@media (min-width:992px){
+    .desk-menu{
+        display: block;
+    }
+    /* start big header coding */
+    .big-slider{
+
+        z-index: -1;
+    }
+    /* end big header coding */
+
+    /* start slider label */
+
+    .slider-label{
+        overflow: hidden;
+        width: 100%;
+        height: 1080px;
+        float: left;
+        margin-top: -1030px;
+    }
+    .picone-header{
+        margin-top: 350px;
+        font-size: 50px;
+        color: white;
+        display: none;
+    }
+
+    .picone-btn{
+        width: 105px;
+        padding: 15px;
+        font-weight: bold;
+        margin-top: 30px;
+        border: none;
+        background-color: transparent;
+        display: none;
+        position: relative;
+    }
+
+    .picone-btn::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.3s;
+        border-top: 3px solid white;
+        border-left: 3px solid white;
+        top: 0;
+        left: 0;
+    }
+    .picone-btn::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: all 0.3s;
+        border-bottom: 3px solid white;
+        border-right: 3px solid white;
+        bottom: 0;
+        right: 0;
+    }
+    .picone-btn:hover::before,.picone-btn:hover::after{
+        width: 10%;
+            height: 10%;
+            transform: rotate(360deg);
+    }
+
+    .picone-btn a{
+        color: white;
+    }
+    /* start slider label */
+    /* Start label */
+
+    .pic2-header{
+        margin-top: 450px;
+        font-size: 80px;
+        color: #fff;
+        display: none;
+    }
+    .pic2-para{
+        font-size: 50px;
+        margin-top: -50px;
+        color: rgb(96, 255, 242);
+        display: none;
+    }
+    /* end label */
+}
+
+@media (max-width:1250px) and (min-width:992px){
+    /* start big header coding */
+    .big-slider{
+
+        z-index: -1;
+    }
+    /* end big header coding */
+        /* start slider label */
+
+        .slider-label{
+            width: 100%;
+            height: 220px;
+            float: left;
+            margin-top: -500px;
+            overflow: hidden;
+            z-index: -2;
+        }
+        .picone-header{
+            margin-top: 30px;
+            font-size: 50px;
+            color: white;
+            display: none;
+        }
+    
+        .picone-btn{
+            width: 105px;
+            padding: 15px;
+            font-weight: bold;
+            margin-top: 30px;
+            border: none;
+            background-color: transparent;
+            display: none;
+            position: relative;
+        }
+    
+        .picone-btn::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.3s;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            top: 0;
+            left: 0;
+        }
+        .picone-btn::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.3s;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            bottom: 0;
+            right: 0;
+        }
+        .picone-btn:hover::before,.picone-btn:hover::after{
+            width: 10%;
+                height: 10%;
+                transform: rotate(360deg);
+        }
+    
+        .picone-btn a{
+            color: white;
+        }
+        /* start slider label */
+        /* Start label */
+    
+        .pic2-header{
+            margin-top: 80px;
+            font-size: 50px;
+            color: #fff;
+            display: none;
+        }
+        .pic2-para{
+            font-size: 50px;
+            margin-top: -40px;
+            color: rgb(96, 255, 242);
+            display: none;
+        }
+        /* end label */
+}
+
+@media (max-width:992px){
+    /* start big header coding */
+    .big-slider{
+
+        z-index: -1;
+    }
+    /* end big header coding */
+    /* start slider label */
+
+        .slider-label{
+            width: 100%;
+            height: 220px;
+            float: left;
+            margin-top: -220px;
+            overflow: hidden;
+            z-index: -2;
+        }
+        .picone-header{
+            margin-top: 30px;
+            font-size: 30px;
+            color: white;
+            display: none;
+        }
+    
+        .picone-btn{
+            width: 105px;
+            padding: 15px;
+            font-weight: bold;
+            margin-top: 30px;
+            border: none;
+            background-color: transparent;
+            display: none;
+            position: relative;
+        }
+    
+        .picone-btn::before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.3s;
+            border-top: 3px solid white;
+            border-left: 3px solid white;
+            top: 0;
+            left: 0;
+        }
+        .picone-btn::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: all 0.3s;
+            border-bottom: 3px solid white;
+            border-right: 3px solid white;
+            bottom: 0;
+            right: 0;
+        }
+        .picone-btn:hover::before,.picone-btn:hover::after{
+            width: 10%;
+                height: 10%;
+                transform: rotate(360deg);
+        }
+    
+        .picone-btn a{
+            color: white;
+        }
+        /* start slider label */
+        /* Start label */
+    
+        .pic2-header{
+            margin-top: 80px;
+            font-size: 30px;
+            color: #fff;
+            display: none;
+        }
+        .pic2-para{
+            font-size: 20px;
+            margin-top: -20px;
+            color: rgb(96, 255, 242);
+            display: none;
+        }
+        /* end label */
+        section #first-work div{
+            width: 100%!important;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        section #first-work img{
+            margin-top: 30px;
+        }
+        section{
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+        section #heading{
+            font-size: 40px!important;
+            margin-top: 30px;
+            margin-bottom: 20px!important;
+        }
+        #about #about-me img{
+            width: 100%!important;
+        }
+        #about #about-me-con{
+            width: 100%!important;
+        }
+        #about{
+            padding: 10px 20px!important;
+            text-align: center;
+        }
+        #about-me{
+            padding: 0px!important;
+        }
+    /* end slider label */
+    div#blog1,div#blog2,div#blog3{
+        width: 100%;
+    }
+    #contact-us{
+        padding: 15px 30px!important;
+        
+    }
+    #contact-us h1{
+        font-size: 40px!important;
+    }
+    #contact-us input[type=text]{
+        width: 100%!important;
+        margin-bottom: 60px;
+        
+    }
+    #contact-us form div{
+        padding: 50px 0!important;
+    }
+    footer{
+        padding: 10px 20px!important;
+    }
+    footer h1{
+        font-size: 54px!important;
+    }
+    footer #upper #logo{
+        width: 100%!important;
+        text-align: center!important;
+        padding-bottom: 20px;
+    }
+    footer #upper #footer-content{
+        width: 100%!important;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    footer #upper #footer-content h5{
+        font-size: 18px!important;
+    }
+    footer #upper #footer-content a{
+        font-size: 12px!important;
+    }
+    footer #upper #footer-content ul{
+        width: 32%!important;
+    }
+}
+
+/* end mobile nav coding */
+
+/* start desktop menu coding */
+
+.desk-menu{
+    list-style: none;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+}
+
+a{
+    text-decoration: none;
+}
+
+.brand-name{
+    float: left;
+    padding: 15px;
+}
+
+.brand-name li a{ 
+    font-size: 28px;
+    color: white;
+    font-weight: bold;
+}
+.top-right-nav{
+    float: right;
+}
+.top-right-nav li{
+    display: inline-block;
+    padding: 22px 20px;
+}
+
+.top-right-nav li a{
+    font-weight: 600;
+    color: white;
+}
+.top-right-nav li:hover{
+    background-color: white;
+    transition: 1s;
+}
+.top-right-nav li:hover a{
+    color: black;
+}
+/* end desktop menu coding */
+/* my Work */
+section{
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+    flex-direction: column;
+    
+}
+section #heading{
+    font-size: 80px;
+    margin-bottom: 70px;
+}
+
+section #first-work{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 60px;
+}
+section #first-work div{
+    width: 30%;
+    font-size: 25px;
+}
+section #first-work h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+    color: #60fff2;
+}
+
+.btn-sec{
+    width: 100px;
+    height: 100px;
+    padding: 25px 30px;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: transparent;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.3s;
+}
+
+.btn-sec a{
+    color: white;
+}
+
+.btn-sec:hover span{
+    transform: rotate(-45deg);
+    color: black;
+}
+.btn-sec:hover{
+    background-color: white;
+}
+
+#about{
+    padding: 0px 100px;
+    width: 100%; 
+    background-color: #0A0A0A;
+    display: flex;
+    flex-direction: column;
+
+}
+#about #about-me img{
+    width: 50%;
+}
+#about #about-me{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+
+#about #about-me-con{
+    width: 50%;
+    margin-top: 10px;
+}
+#about #about-me p{
+    margin-top: 20px;
+}
+#about #about-me h1{
+    color: rgb(96, 255, 242);
+}
+#knowledge{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+#knowledge h4{
+    color: rgb(96, 255, 242);
+}
+#about-me-con button{
+    background: transparent;
+}
+#about-me-con button{
+    width: 105px;
+    padding: 15px;
+    font-weight: bold;
+    margin-top: 30px;
+    border: none;
+    background-color: transparent;
+    position: relative;
+}
+
+#about-me-con button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s;
+    border-top: 3px solid white;
+    border-left: 3px solid white;
+    top: 0;
+    left: 0;
+}
+#about-me-con button::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: all 0.3s;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    bottom: 0;
+    right: 0;
+}
+#about-me-con button:hover::before,#about-me-con button:hover::after{
+    width: 10%;
+        height: 10%;
+        transform: rotate(360deg);
+}
+
+#about-me-con button a{
+    color: white;
+}
+#html, #css, #scss, #javascript{
+    width: 300px;
+    height: 20px;
+    border: 2px solid rgb(96, 255, 242);
+    margin-top: 5px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#html::before{
+    content: "90%";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: 10%;
+    background: rgb(96, 255, 242);
+    color: black;
+    font-weight: bolder;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#css::before{
+    content: "90%";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: 10%;
+    background: rgb(96, 255, 242);
+    color: black;
+    font-weight: bolder;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#scss::before{
+    content: "80%";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: 20%;
+    background: rgb(96, 255, 242);
+    color: black;
+    font-weight: bolder;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#javascript::before{
+    content: "75%";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    right: 25%;
+    background: rgb(96, 255, 242);
+    color: black;
+    font-weight: bolder;
+    padding-left: 10px;
+    font-size: 15px;
+}
+#blog{
+    width: 100%;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+#blog1{
+    width: 45%;
+    height: 184px;
+    background: url("../images/blog1.png") no-repeat center center;
+    background-size: cover;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+}
+#blog2{
+    width: 45%;
+    height: 184px;
+    background: url("../images/blog2.png") no-repeat center center;
+    background-size: cover;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+}
+#blog3{
+    width: 45%;
+    height: 184px;
+    background: url("../images/blog3.png") no-repeat center center;
+    background-size: cover;
+    padding: 10px 20px;
+}
+#blog-heading{
+    text-align: center;
+    padding: 30px;
+}
+#blog1 h3{
+    padding: 10px 0;
+    color: #6DE6A2;
+}
+#blog1 p{
+    width: 70%;
+    padding-bottom: 10px;
+}
+#blog1 button{
+    padding: 1%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+#blog2 h3{
+    padding: 10px 0;
+    color: #F4CC99;
+}
+#blog2 p{
+    width: 70%;
+    padding-bottom: 10px;
+}
+#blog2 button{
+    padding: 1%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+#blog3 h3{
+    padding: 10px 0;
+    color: #8B80BF;
+}
+#blog3 p{
+    width: 70%;
+    padding-bottom: 10px;
+}
+#blog3 button{
+    padding: 1%;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid white;
+}
+#blog button:hover{
+    background-color: white;
+}
+#blog button:hover span{
+    color: black;
+}
+
+#contact-us{
+    width: 100%;
+    padding: 51px 104px;
+    background-color: #181818;
+}
+#contact-us h1{
+    font-size: 48px;
+    padding-bottom: 50px;
+    color: rgb(96, 255, 242);
+}
+#contact-us form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+#contact-us form div{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 100px 0px;
+}
+#contact-us form div input[type=text]{
+    width: 40%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 10px 0px;
+    height: 50px;
+    font-size: 36px;
+}
+#contact-us form div input[type=text]:focus{
+    outline: none;
+}
+#contact-us form div input[type=text]::placeholder{
+    color: white;
+    font-size: 36px;
+}
+
+/* Footer coding */
+ul{
+  list-style: none;  
+}
+footer{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+footer #upper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer #upper #logo{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer #upper #logo h1{
+    font-size: 64px;
+    color: rgb(96, 255, 242);
+}
+footer #upper #footer-content{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    line-height: 30px;
+}
+#social{
+    cursor: pointer;
+}
+footer #upper #footer-content h5{
+    font-size: 24px;
+    color: rgb(96, 255, 242);
+}
+footer #upper #footer-content a{
+    word-wrap: break-word;
+}
+/* footer coding */
+
+.scrolltop{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    font-size: 30px;
+    border: 2px solid rgb(96, 255, 242);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    padding: 7px;
+    display: none;
+}
